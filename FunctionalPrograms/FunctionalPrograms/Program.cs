@@ -4,29 +4,28 @@ namespace Day5BasicPrograms
 {
     internal class Program
     { 
-         public class Power_Of_2
+         public class Harmonic
         {
-            public void Power_Of_Two(int number)
+            public void HarmonicNum(int number)
             {
-                int temp = number;
-                int result = 1;
-                while (number != 0)
+                double result = 0;
+                for (int i = 1; i <= number; i++)
                 {
-                    result *= 2;
-                    number--;
+                    result += 1 / (float)i;
+                    //result = result + 1 / i;
                 }
-                Console.WriteLine($"Power of 2 ^ {temp} is : {result}");
-          
+                Console.WriteLine($"Harmonic Number of given number is :{result}");
+
             }
         
             public static void Main(string[] args)
             {
-                Power_Of_2 p2 = new Power_Of_2(); //Create Object
+                Harmonic h = new Harmonic(); //Create Object
 
                 Console.WriteLine("Enter the number ");  //take inpute from user
                 int number = Convert.ToInt32(Console.ReadLine());
 
-                p2.Power_Of_Two(number); //Call Methode\
+                h.HarmonicNum(number); //Call Methode\
             }
         }
     }
