@@ -3,30 +3,33 @@
 namespace Day5BasicPrograms
 {
     internal class Program
-    { 
-         public class Power_Of_2
+    {
+        public class Even_Or_Odd
         {
-            public void Power_Of_Two(int number)
+            public void evenOrOdd(int number)
             {
-                int temp = number;
-                int result = 1;
-                while (number != 0)
+
+                if (number % 2 == 0)
                 {
-                    result *= 2;
-                    number--;
+                    Console.WriteLine($"Given Number {number} is Even");
+
                 }
-                Console.WriteLine($"Power of 2 ^ {temp} is : {result}");
-          
+                else
+                {
+                    Console.WriteLine($"Given Number {number} is Odd");
+                }
             }
-        
-            public static void Main(string[] args)
+
+        }
+        internal class Programs
+        {
+            static void Main(string[] args)
             {
-                Power_Of_2 p2 = new Power_Of_2(); //Create Object
-
-                Console.WriteLine("Enter the number ");  //take inpute from user
+                Console.WriteLine("Enter Numbers "); //Take inpute from user
                 int number = Convert.ToInt32(Console.ReadLine());
+                Even_Or_Odd eo = new Even_Or_Odd(); // Create Object
+                eo.evenOrOdd(number); //call Method
 
-                p2.Power_Of_Two(number); //Call Methode\
             }
         }
     }
