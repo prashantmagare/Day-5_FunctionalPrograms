@@ -18,7 +18,6 @@ namespace Day5BasicPrograms
                 Console.WriteLine($"Power of 2 ^ {temp} is : {result}");
           
             }
-        
             public static void Main(string[] args)
             {
                 Power_Of_2 p2 = new Power_Of_2(); //Create Object
