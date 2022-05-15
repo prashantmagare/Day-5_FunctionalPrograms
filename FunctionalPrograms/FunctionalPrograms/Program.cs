@@ -3,31 +3,33 @@
 namespace Day5BasicPrograms
 {
     internal class Program
-    { 
-         public class Power_Of_2
+    {
+        public class Larger_Number
         {
-            public void Power_Of_Two(int number)
+            public void LargerNumber(int number1, int number2, int number3)
             {
-                int temp = number;
-                int result = 1;
-                while (number != 0)
+                if ((number1 > number2) && (number1 > number3))
                 {
-                    result *= 2;
-                    number--;
+                    Console.WriteLine($"larger number is {number1}");
                 }
-                Console.WriteLine($"Power of 2 ^ {temp} is : {result}");
-          
-            }
-        
-            public static void Main(string[] args)
-            {
-                Power_Of_2 p2 = new Power_Of_2(); //Create Object
-
-                Console.WriteLine("Enter the number ");  //take inpute from user
-                int number = Convert.ToInt32(Console.ReadLine());
-
-                p2.Power_Of_Two(number); //Call Methode\
+                else if ((number2 > number3))
+                {
+                    Console.WriteLine($"larger number is {number2}");
+                }
+                else
+                {
+                    Console.WriteLine($"larger number is {number3}");
+                }
             }
         }
+            static void Main(string[] args)
+            {
+                Console.WriteLine("Enter Three Numbers ");
+                int number1 = Convert.ToInt32(Console.ReadLine());
+                int number2 = Convert.ToInt32(Console.ReadLine());
+                int number3 = Convert.ToInt32(Console.ReadLine());
+                Larger_Number n = new Larger_Number();
+                n.LargerNumber(number1, number2, number3);
+            }
     }
 }
