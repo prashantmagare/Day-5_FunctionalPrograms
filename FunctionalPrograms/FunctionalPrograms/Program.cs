@@ -3,31 +3,27 @@
 namespace Day5BasicPrograms
 {
     internal class Program
-    { 
-         public class Power_Of_2
+    {
+        public class VowelOrConsonant
         {
-            public void Power_Of_Two(int number)
+            public void Vowel_OR_Consonant(char letter)
             {
-                int temp = number;
-                int result = 1;
-                while (number != 0)
+                if (letter == 'a' || letter == 'A' || letter == 'e' || letter == 'E' || letter == 'i' || letter == 'I' || letter == 'o' || letter == 'O' || letter == 'u' || letter == 'U')
                 {
-                    result *= 2;
-                    number--;
+                    Console.WriteLine($"Given letter : {letter} is Vowel");
                 }
-                Console.WriteLine($"Power of 2 ^ {temp} is : {result}");
-          
+                else
+                {
+                    Console.WriteLine($"Given letter : {letter} is Consonant");
+                }
             }
-        
-            public static void Main(string[] args)
+        }
+        public static void Main(string[] args)
             {
-                Power_Of_2 p2 = new Power_Of_2(); //Create Object
-
-                Console.WriteLine("Enter the number ");  //take inpute from user
-                int number = Convert.ToInt32(Console.ReadLine());
-
-                p2.Power_Of_Two(number); //Call Methode\
-            }
+            Console.WriteLine("Enter a Char Value");
+            char letter = Convert.ToChar(Console.ReadLine());
+            VowelOrConsonant voc = new VowelOrConsonant();
+            voc.Vowel_OR_Consonant(letter);
         }
     }
 }
