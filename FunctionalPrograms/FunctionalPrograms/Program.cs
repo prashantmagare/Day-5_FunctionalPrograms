@@ -3,30 +3,30 @@
 namespace Day5BasicPrograms
 {
     internal class Program
-    { 
-         public class Power_Of_2
+    {
+        public class Factor
         {
-            public void Power_Of_Two(int number)
+
+            public void Factor_Of_Number(int number)
             {
-                int temp = number;
-                int result = 1;
-                while (number != 0)
+
+                for (int i = 1; i < number; i++)
                 {
-                    result *= 2;
-                    number--;
+                    if (number % i == 0)
+                    {
+                        Console.WriteLine($"Factors of Given Number are: {i}");
+
+                    }
                 }
-                Console.WriteLine($"Power of 2 ^ {temp} is : {result}");
-          
             }
-        
             public static void Main(string[] args)
             {
-                Power_Of_2 p2 = new Power_Of_2(); //Create Object
+                Factor p2 = new Factor(); //Create Object
 
                 Console.WriteLine("Enter the number ");  //take inpute from user
                 int number = Convert.ToInt32(Console.ReadLine());
 
-                p2.Power_Of_Two(number); //Call Methode\
+                p2.Factor_Of_Number(number); //Call Methode\
             }
         }
     }
