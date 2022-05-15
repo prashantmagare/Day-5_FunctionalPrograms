@@ -3,31 +3,31 @@
 namespace Day5BasicPrograms
 {
     internal class Program
-    { 
-         public class Power_Of_2
+    {
+        public class SwapNumber
         {
-            public void Power_Of_Two(int number)
+            int temp = 0;
+            public void Swapping(int number1, int number2)
             {
-                int temp = number;
-                int result = 1;
-                while (number != 0)
-                {
-                    result *= 2;
-                    number--;
-                }
-                Console.WriteLine($"Power of 2 ^ {temp} is : {result}");
-          
+                temp = number1;
+                number1 = number2;
+                number2 = temp;
+                Console.WriteLine($"After Swapping number 1 : {number1} number 2 : {number2}");
             }
-        
-            public static void Main(string[] args)
-            {
-                Power_Of_2 p2 = new Power_Of_2(); //Create Object
 
-                Console.WriteLine("Enter the number ");  //take inpute from user
-                int number = Convert.ToInt32(Console.ReadLine());
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter number1 and number2"); //take inpute from user
 
-                p2.Power_Of_Two(number); //Call Methode\
-            }
+            int number1 = Convert.ToInt32(Console.ReadLine());
+            int number2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine($"Before Swapping number1 : {number1} number 2 : {number2}"); //print N1 & N2
+
+            SwapNumber swap = new SwapNumber(); //Create Object
+
+            swap.Swapping(number1, number2); // Call method
         }
     }
 }
