@@ -4,30 +4,26 @@ namespace Day5BasicPrograms
 {
     internal class Program
     { 
-         public class Power_Of_2
-        {
-            public void Power_Of_Two(int number)
+            public class Quoitent_And_Remainder
             {
-                int temp = number;
-                int result = 1;
-                while (number != 0)
+                public void Quoitent_and_Remainder(double number)
                 {
-                    result *= 2;
-                    number--;
+                    double Remainder = number % 2;
+                    double Quoitent = number / 2;
+                    Console.WriteLine($"Remainder of given number is : {Remainder}");
+                    Console.WriteLine($"Quoitent of given number is : {Quoitent}");
                 }
-                Console.WriteLine($"Power of 2 ^ {temp} is : {result}");
-          
+
             }
-        
+
             public static void Main(string[] args)
             {
-                Power_Of_2 p2 = new Power_Of_2(); //Create Object
+                Quoitent_And_Remainder qandr = new Quoitent_And_Remainder(); //Create Object
 
                 Console.WriteLine("Enter the number ");  //take inpute from user
-                int number = Convert.ToInt32(Console.ReadLine());
+                double number = Convert.ToDouble(Console.ReadLine());
 
-                p2.Power_Of_Two(number); //Call Methode\
+                qandr.Quoitent_and_Remainder(number); //Call Methode\
             }
         }
     }
-}
